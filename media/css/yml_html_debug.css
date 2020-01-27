@@ -1,0 +1,54 @@
+.yandexmarket-debug .yandexmarket-items {
+    padding-right: 20px;
+}
+
+.yandexmarket-debug ul {
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.yandexmarket-debug h2 {
+    margin-left: 20px;
+}
+
+.yandexmarket-debug h2 div {
+    font-size: 12px;
+}
+
+.yandexmarket-debug-item {
+    padding: 10px 8px;
+    margin-left: 0;
+    list-style-position: inside;
+    border-top: 1px solid #eaeaea;
+}
+
+.yandexmarket-debug-item.even {
+    background: #f3f3f3;
+}
+
+.yandexmarket-debug-box {
+    font-size: 12px;
+    padding-left: 20px;
+}
+
+.yandexmarket-debug-box * {
+    color: #666;
+}
+
+.yandexmarket-debug-box div > span {
+    font-weight: bold;
+}
+
+.yandexmarket-debug-yml,
+.yandexmarket-debug-items-count {
+    padding: 10px;
+    background: #f1ffa4;
+    border-top: 1px solid #eaeaea;
+}
+
+.yandexmarket-debug-item a.yandexmarket-link {
+    font-weight: bold;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset
+            name="menuitem"
+            label="COM_YANDEXMARKET_HEADING_MENU_ITEM"
+            description="COM_YANDEXMARKET_MENU_ITEM_DESC">
+        <field
+                name="category_menuitem"
+                type="menuitem"
+                default=""
+                label="COM_YANDEXMARKET_HEADING_MENU_ITEM"
+                description="COM_YANDEXMARKET_MENU_ITEM_DESC">
+            <option	value="">COM_YANDEXMARKET_OPTION_SELECT_MENU_ITEM</option>
+        </field>
+        <field
+                name="category_id"
+                type="hidden"
+                class="readonly"
+                default=""/>
+    </fieldset>
+</form>

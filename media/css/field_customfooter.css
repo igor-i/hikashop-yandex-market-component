@@ -1,0 +1,121 @@
+.igori-footer {
+    height: 190px;
+}
+
+
+.igori-footer.installer {
+    margin-top: 20px;
+}
+
+.igori-footer .gopro-ad {
+    text-align: center;
+}
+
+.igori-footer .gopro-ad a.gopto-btn {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    /* 1 */
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    /* 2 */
+    border: none;
+    /* 3 */
+    line-height: 40px;
+    /* 4 */
+    min-height: 40px;
+    /* 5 */
+    /* 6 */
+    padding: 0 12px;
+    background: #075c97;
+    color: #ffffff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    font-weight: 400;
+    font-size: 14px;
+    -webkit-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
+}
+
+.igori-footer .gopro-ad .icon-publish:before {
+    color: #ffffff;
+}
+
+.igori-footer .igori-jedlink {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.igori-footer .igori-jedlink .icon-star {
+    color: #feb123;
+}
+
+.igori-footer .igori-jedlink.installer {
+    margin-left: 0;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.igori-footer .igori-copyright {
+    color: #808080;
+    font-size: 10px;
+    margin-top: -18px;
+    text-align: center;
+}
+
+.igori-footer .component-name {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.igori-poweredby {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.igori-footer img.igori-logo {
+    width: 25px;
+    height: 25px;
+    border-radius:50%;
+    margin: 0 3px;
+}
+
+.parent-igori-poweredby {
+    text-align: center;
+}
+
+.block-igori-poweredby {
+    margin-top: 30px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    /* 1 */
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    /* 2 */
+    border: none;
+    /* 3 */
+    line-height: 40px;
+    /* 4 */
+    min-height: 40px;
+    /* 5 */
+    /* 6 */
+    padding: 0 12px;
+    /*background: #075c97;*/
+    background: rgb(51, 51, 51);
+    color: #ffffff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    font-weight: 400;
+    font-size: 14px;
+    -webkit-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
+}

@@ -1,0 +1,361 @@
+.yandexmarket-category-options {
+    padding:10px;
+    padding-left: 27px;
+}
+
+.yandexmarket-category-options label {
+    cursor:move;
+    clear: both;
+}
+
+.yandexmarket-category-options input, .yandexmarket-category-options select {
+    margin: 5px 5px 2px 0px;
+}
+
+.yandexmarket-links {
+    font-size: 12px;
+}
+
+.yandexmarket-links .yandexmarket-link {
+    white-space: nowrap;
+}
+
+.yandexmarket-modal-status {
+    font-size: 13px;
+}
+
+.yandexmarket-modal-status .icon-star {
+    color: #feb123;
+}
+
+#yandexmarket-items-container {
+    position: relative;
+}
+
+#yandexmarket-items-container .btn-group [class^="icon-"],
+#yandexmarket-items-container .btn-group [class*=" icon-"] {
+    font-size: 14px;
+}
+
+#yandexmarket-items-container .small.silver {
+    color: silver;
+}
+
+#itemList .ymlitem td.ymlitem-link {
+    width: 700px;
+}
+
+#itemList .ymlitem td.ymlitem-name {
+    width: 200px;
+}
+
+#itemList .ymlitem td.ymlitem-link,
+#itemList .ymlitem td.ymlitem-name {
+    padding-bottom: 14px;
+    padding-top: 14px;
+}
+
+#itemList .ymlitem td .ymlitem-published,
+#itemList .ymlitem td .ymlitem-priority,
+#itemList .ymlitem td .ymlitem-changefreq {
+    padding-bottom: 5px;
+    padding-top: 6px;
+}
+
+#itemList .ymlitem td .ymlitem-priority select,
+#itemList .ymlitem td .ymlitem-changefreq select {
+    margin-bottom: -5px;
+    margin-top: -6px;
+}
+
+#itemList .ymlitem.with-uid td {
+    line-height: 16px;
+}
+
+#itemList .ymlitem.selected td {
+    background-color: rgba(0,0,0,0.1) !important;
+}
+
+#itemList .ymlitem-published,
+#itemList .ymlitem-priority,
+#itemList .ymlitem-changefreq {
+    cursor: pointer;
+}
+
+#itemList .ymlitem select {
+    margin: 0;
+}
+
+#itemList .ymlitem-priority select {
+    width: 60px;
+}
+
+#itemList .ymlitem-changefreq select {
+    width: 80px;
+}
+
+#itemList .updated {
+    color: #00f;
+}
+
+ul.ul_sortable {
+    list-style:none;
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+
+ul.ul_sortable li:hover {
+    background-color: #e8e8e8;
+}
+
+ul.ul_sortable li {
+    cursor: move;
+    padding: 5px;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    max-width: auto !important;
+    width: 99%;
+    display: table;
+}
+
+ul.ul_sortable li label.category_label {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 0px;
+    line-height: 24px;
+}
+
+ul.ul_sortable li.ui-sortable-helper {
+    background-color: #e2e2e2;
+}
+
+ul.ul_sortable li.ui-sortable-placeholder {
+    border: 4px dashed #f6f6f6 !important;
+    visibility: visible !important;
+    background-color: transparent !important;
+}
+
+/* Spin Animation */
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.yandexmarket-loading {
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 21px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 200px;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.35) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+}
+
+.yandexmarket-loading .spin {
+    -webkit-animation: spin 0.9s infinite linear;
+    -moz-animation: spin 0.9s infinite linear;
+    animation: spin 0.9s infinite linear;
+}
+
+.ymlitem .icon-warning {
+    color: #ff911f;
+}
+
+#item-form.yml .controls {
+    margin-left: 0;
+}
+
+.yandexmarket-table {
+    max-width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.yandexmarket-list-header,
+.yandexmarket-list-header .yandexmarket-category-item {
+    width: 100%;
+}
+
+.yandexmarket-category-item:nth-child(odd) {
+    background: #f6f6f6;
+}
+
+.yandexmarket-table .yandexmarket-cell {
+    line-height: 18px;
+    float: left;
+    font-weight: bold;
+    padding: 8px 0;
+    margin-right: 10px;
+}
+
+.yandexmarket-cell label {
+    font-weight: normal !important;
+}
+
+.yandexmarket-cell.yandexmarket-col-selected {
+    width: 70px;
+    text-align: center;
+}
+
+.yandexmarket-cell.yandexmarket-col-title {
+    width: 240px;
+}
+
+.yandexmarket-cell.yandexmarket-col-priority {
+    width: 70px;
+    text-align: center;
+}
+
+.yandexmarket-cell.yandexmarket-col-changefreq {
+    width: 140px;
+    text-align: center;
+}
+
+.yandexmarket-cell.yandexmarket-col-priority .chzn-container,
+.yandexmarket-cell.yandexmarket-col-changefreq .chzn-container {
+    width: 100% !important;
+}
+
+.yandexmarket-links .icon-new-tab,
+.ymlitem-link .icon-new-tab {
+    color: #b5b5b5;
+}
+
+
+span.level-mark {
+    margin-right: 2px;
+}
+
+.ymlitem-link .yandexmarket-item-uid {
+    color: #888;
+}
+
+.yandexmarket-info {
+    cursor: help;
+}
+
+body.com_yandexmarket .form-horizontal .controls {
+    margin-left: 0;
+}
+
+@media (max-width: 850px) {
+    .yandexmarket-cell.yandexmarket-col-title {
+        width: 190px;
+    }
+    #j-main-container {
+        padding-left: 0 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .yandexmarket-table .yandexmarket-cell {
+        margin-right: 0;
+    }
+    .yandexmarket-cell.yandexmarket-col-selected {
+        margin-left: 3%;
+        width: 10%;
+        text-align: left;
+    }
+    .yandexmarket-cell.yandexmarket-col-title {
+        width: 87%;
+    }
+    .yandexmarket-cell.yandexmarket-col-selected,
+    .yandexmarket-cell.yandexmarket-col-title {
+        padding-top: 12px;
+    }
+    .yandexmarket-cell.yandexmarket-col-priority {
+        width: 30%;
+        margin-left: 13%;
+        text-align: left;
+    }
+    .yandexmarket-cell.yandexmarket-col-changefreq {
+        margin-left: 3%;
+        width: 54%;
+        text-align: left;
+    }
+    .yandexmarket-cell.yandexmarket-col-priority,
+    .yandexmarket-cell.yandexmarket-col-changefreq {
+        padding-top: 0;
+        padding-bottom: 16px;
+    }
+    .yandexmarket-cell.yandexmarket-col-changefreq:before,
+    .yandexmarket-cell.yandexmarket-col-priority:before {
+        display: inline;
+        font-weight: normal;
+        content: attr(data-title);
+    }
+    .yandexmarket-cell.yandexmarket-col-priority .chzn-container {
+        width: 70px !important;
+    }
+    .yandexmarket-cell.yandexmarket-col-changefreq .chzn-container {
+        width: 120px !important;
+    }
+    .yandexmarket-list-header {
+        display: none;
+    }
+    .yandexmarket-cell label {
+        font-weight: bold !important;
+        font-size: 16px;
+    }
+    #itemList .ymlitem td.center {
+        padding-left: 0;
+    }
+    #itemList .ymlitem td.center:first-of-type {
+        width: 14px;
+        padding-left: 8px;
+    }
+    #itemList .ymlitem td.ymlitem-link {
+        width: 100px;
+    }
+    #itemList .ymlitem td.ymlitem-name {
+        width: 65px;
+    }
+    #itemList {
+        table-layout: fixed;
+        word-wrap: break-word;
+    }
+    #itemList thead {
+        display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    #itemList .ymlitem td.center:first-of-type {
+        width: 5px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    #itemList .ymlitem td.center:last-of-type {
+        width: 9px;
+        overflow: hidden;
+        white-space: nowrap;
+        letter-spacing: 30px;
+    }
+
+    .ymlitem {
+        font-size: 11px;
+    }
+}
+
+#ymlList td a img {
+    margin-top: -3px;
+}

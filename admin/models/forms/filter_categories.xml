@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+            name="search"
+            type="text"/>
+
+        <field
+            name="published"
+            type="status"
+            onchange="this.form.submit();"
+            filter="0,1,*">
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+    </fields>
+
+    <fields name="list">
+        <field
+            name="fullordering"
+            type="list"
+            label="JGLOBAL_SORT_BY"
+            description="JGLOBAL_SORT_BY"
+            statuses="*,0,1"
+            onchange="this.form.submit();"
+            default="hika.category_parent_id ASC">
+
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="cat.published ASC">COM_YANDEXMARKET_GRID_PUBLISHED_ASC</option>
+            <option value="cat.published DESC">COM_YANDEXMARKET_GRID_PUBLISHED_DESC</option>
+            <option value="hika.category_parent_id ASC">COM_YANDEXMARKET_GRID_PARENT_ID_ASC</option>
+            <option value="hika.category_parent_id DESC">COM_YANDEXMARKET_GRID_PARENT_ID_DESC</option>
+            <option value="hika.category_name ASC">COM_YANDEXMARKET_GRID_NAME_ASC</option>
+            <option value="hika.category_name DESC">COM_YANDEXMARKET_GRID_NAME_DESC</option>
+            <option value="cat.category_myname ASC">COM_YANDEXMARKET_GRID_MYNAME_ASC</option>
+            <option value="cat.category_myname DESC">COM_YANDEXMARKET_GRID_MYNAME_DESC</option>
+            <option value="hika.category_id ASC">COM_YANDEXMARKET_GRID_ID_ASC</option>
+            <option value="hika.category_id DESC">COM_YANDEXMARKET_GRID_ID_DESC</option>
+        </field>
+
+        <field
+            name="limit"
+            type="limitbox"
+            class="inputbox input-mini"
+            default="25"
+            label="COM_YANDEXMARKET_LIST_LIMIT"
+            description="COM_YANDEXMARKET_LIST_LIMIT_DESC"
+            onchange="this.form.submit();"/>
+    </fields>
+</form>

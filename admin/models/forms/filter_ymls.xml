@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+            name="search"
+            type="text"/>
+
+        <field
+            name="published"
+            type="status"
+            onchange="this.form.submit();"
+            filter="0,1,-2,*">
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+
+        <field
+            name="default"
+            type="list"
+            onchange="this.form.submit();">
+            <option value="">COM_YANDEXMARKET_OPTION_SELECT_DEFAULT</option>
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+    </fields>
+
+    <fields name="list">
+        <field
+            name="fullordering"
+            type="list"
+            label="JGLOBAL_SORT_BY"
+            description="JGLOBAL_SORT_BY"
+            statuses="*,0,1,-2"
+            onchange="this.form.submit();"
+            default="yml.id DESC">
+
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="yml.id ASC">COM_YANDEXMARKET_GRID_ID_ASC</option>
+            <option value="yml.id DESC">COM_YANDEXMARKET_GRID_ID_DESC</option>
+            <option value="yml.published ASC">COM_YANDEXMARKET_GRID_PUBLISHED_ASC</option>
+            <option value="yml.published DESC">COM_YANDEXMARKET_GRID_PUBLISHED_DESC</option>
+            <option value="yml.is_default ASC">COM_YANDEXMARKET_GRID_DEFAULT_ASC</option>
+            <option value="yml.is_default DESC">COM_YANDEXMARKET_GRID_DEFAULT_DESC</option>
+            <option value="yml.name ASC">COM_YANDEXMARKET_GRID_NAME_ASC</option>
+            <option value="yml.name DESC">COM_YANDEXMARKET_GRID_NAME_DESC</option>
+        </field>
+
+        <field
+            name="limit"
+            type="limitbox"
+            class="inputbox input-mini"
+            default="25"
+            label="COM_YANDEXMARKET_LIST_LIMIT"
+            description="COM_YANDEXMARKET_LIST_LIMIT_DESC"
+            onchange="this.form.submit();"/>
+    </fields>
+</form>

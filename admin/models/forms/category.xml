@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form>
+    <fieldset
+            name="category"
+            label="COM_YANDEXMARKET_YML_PAGE_MAIN">
+        <field
+                name="category_id"
+                type="hidden"
+                class="readonly"
+                readonly="true"
+                default=""/>
+        <field
+                name="category_parent_id"
+                type="hidden"
+                class="readonly"
+                readonly="true"
+                default=""/>
+        <field
+                name="category_name"
+                type="text"
+                label="COM_YANDEXMARKET_HEADING_HIKASHOP_CATEGORY_NAME"
+                description="COM_YANDEXMARKET_HIKASHOP_CATEGORY_NAME_DESC"
+                class="input-xlarge readonly"
+                readonly="true"/>
+        <field
+                name="category_myname"
+                type="text"
+                default=""
+                label="COM_YANDEXMARKET_HEADING_MY_CATEGORY_NAME"
+                description="COM_YANDEXMARKET_MY_CATEGORY_NAME_DESC"
+                class="input-xlarge"/>
+        <field
+                name="category_menuitem"
+                type="menuitem"
+                label="COM_YANDEXMARKET_HEADING_MENU_ITEM"
+                description="COM_YANDEXMARKET_MENU_ITEM_DESC">
+            <option	value="">COM_YANDEXMARKET_OPTION_SELECT_MENU_ITEM</option>
+        </field>
+        <field
+                name="published"
+                type="list"
+                default="1"
+                class="chzn-color-state"
+                label="COM_YANDEXMARKET_COMMON_PUBLISHED_LABEL">
+            <option value="0">JUNPUBLISHED</option>
+            <option value="1">JPUBLISHED</option>
+        </field>
+    </fieldset>
+
+    <!--Описание товарных предложений-->
+    <fields
+            name="params">
+        <fieldset
+                name="offers"
+                label="COM_YANDEXMARKET_HEADING_OFFERS_SETTINGS"
+                addfieldpath="/administrator/components/com_yandexmarket/models/fields">
+
+            <!--Тип описания-->
+            <field
+                    name="offer_type"
+                    type="list"
+                    default="basic"
+                    required="true"
+                    label="COM_YANDEXMARKET_OFFERS_TYPE"
+                    description="COM_YANDEXMARKET_OFFERS_TYPE_DESC">
+                <option value="basic">COM_YANDEXMARKET_OFFERS_TYPE_BASIC</option>
+                <option value="vendor.model">COM_YANDEXMARKET_OFFERS_TYPE_VENDOR</option>
+                <option value="medicine">COM_YANDEXMARKET_OFFERS_TYPE_MEDICINE</option>
+                <!--<option value="book">COM_YANDEXMARKET_OFFERS_TYPE_BOOK</option>-->
+                <!--<option value="audiobook">COM_YANDEXMARKET_OFFERS_TYPE_AUDIOBOOK</option>-->
+                <!--<option value="artist.title">COM_YANDEXMARKET_OFFERS_TYPE_ARTIST</option>-->
+                <!--<option value="event-ticket">COM_YANDEXMARKET_OFFERS_TYPE_TICKET</option>-->
+                <!--<option value="tour">COM_YANDEXMARKET_OFFERS_TYPE_TOUR</option>-->
+            </field>
+
+            <!--Тип товара (typePrefix)-->
+            <field
+                    name="typePrefix"
+                    type="typeprefix"
+                    label="COM_YANDEXMARKET_OFFERS_TYPE_PREFIX"
+                    description="COM_YANDEXMARKET_OFFERS_TYPE_PREFIX_DESC">
+            </field>
+            <field
+                    name="typePrefix-select"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="typePrefix-field-select"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="typePrefix-characteristic-select"
+                    required="false"
+                    type="hidden">
+            </field>
+
+            <!--Производитель (vendor)-->
+            <field
+                    name="vendor"
+                    type="vendor"
+                    required="false"
+                    label="COM_YANDEXMARKET_OFFERS_VENDOR"
+                    description="COM_YANDEXMARKET_OFFERS_VENDOR_DESC">
+            </field>
+            <field
+                    name="vendor-select"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="vendor-field-select"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="vendor-characteristic-select"
+                    required="false"
+                    type="hidden">
+            </field>
+
+            <!--Модель (model)-->
+            <field
+                    name="model"
+                    type="model"
+                    required="false"
+                    label="COM_YANDEXMARKET_OFFERS_MODEL"
+                    description="COM_YANDEXMARKET_OFFERS_MODEL_DESC">
+            </field>
+            <field
+                    name="model-select"
+                    required="false"
+                    type="hidden">
+            </field>
+
+            <!--Наименование (name)-->
+            <field
+                    name="basicName"
+                    type="basicname"
+                    required="false"
+                    label="COM_YANDEXMARKET_OFFERS_NAME"
+                    description="COM_YANDEXMARKET_OFFERS_NAME_DESC">
+            </field>
+            <field
+                    name="basicName-select"
+                    required="false"
+                    type="hidden">
+            </field>
+
+            <!--Описание товара (description)-->
+            <field
+                    name="description"
+                    type="list"
+                    default="description"
+                    required="false"
+                    label="COM_YANDEXMARKET_OFFERS_DESCRIPTION"
+                    description="COM_YANDEXMARKET_OFFERS_DESCRIPTION_DESC">
+                <option value="non">COM_YANDEXMARKET_OFFERS_DESCRIPTION_NON</option>
+                <option value="description">COM_YANDEXMARKET_OFFERS_DESCRIPTION_DESCRIPTION</option>
+            </field>
+
+            <!--Штрихкод (barcode)-->
+            <field
+                    name="barcode"
+                    type="barcode"
+                    default="non"
+                    required="false"
+                    label="COM_YANDEXMARKET_OFFERS_BARCODE"
+                    description="COM_YANDEXMARKET_OFFERS_BARCODE_DESC">
+            </field>
+            <field
+                    name="barcode-select"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="barcode-field-select"
+                    required="false"
+                    type="hidden">
+            </field>
+
+            <!--Характеристики (param)-->
+            <field
+                    name="param"
+                    type="param"
+                    required="false"
+                    label="COM_YANDEXMARKET_OFFERS_PARAM"
+                    description="COM_YANDEXMARKET_OFFERS_PARAM_DESC">
+            </field>
+            <field
+                    name="param-select"
+                    required="false"
+                    type="hidden">
+            </field>
+
+            <!--Вес товара (weight)-->
+            <field
+                    name="weight"
+                    type="list"
+                    default="weight"
+                    required="false"
+                    label="COM_YANDEXMARKET_OFFERS_WEIGHT"
+                    description="COM_YANDEXMARKET_OFFERS_WEIGHT_DESC">
+                <option value="non">COM_YANDEXMARKET_OFFERS_WEIGHT_NON</option>
+                <option value="weight">COM_YANDEXMARKET_OFFERS_WEIGHT_WEIGHT</option>
+            </field>
+
+            <!--Габариты товара (dimensions)-->
+            <field
+                    name="dimensions"
+                    type="list"
+                    default="dimensions"
+                    required="false"
+                    label="COM_YANDEXMARKET_OFFERS_DIMENSIONS"
+                    description="COM_YANDEXMARKET_OFFERS_DIMENSIONS_DESC">
+                <option value="non">COM_YANDEXMARKET_OFFERS_DIMENSIONS_NON</option>
+                <option value="dimensions">COM_YANDEXMARKET_OFFERS_DIMENSIONS_DIMENSIONS</option>
+            </field>
+
+            <!--Рекомендованные товары (rec)-->
+            <field
+                    name="rec"
+                    type="list"
+                    default="non"
+                    required="false"
+                    label="COM_YANDEXMARKET_OFFERS_REC"
+                    description="COM_YANDEXMARKET_OFFERS_REC_DESC">
+                <option value="non">COM_YANDEXMARKET_OFFERS_REC_NON</option>
+                <option value="related">COM_YANDEXMARKET_OFFERS_REC_RELATED</option>
+                <option value="options">COM_YANDEXMARKET_OFFERS_REC_OPTIONS</option>
+                <option value="related-and-options">COM_YANDEXMARKET_OFFERS_REC_RELATED_AND_OPTIONS</option>
+            </field>
+
+            <!--Группировать варианты-->
+            <field
+                    name="group"
+                    type="radio"
+                    required="true"
+                    label="COM_YANDEXMARKET_OFFERS_GROUP"
+                    description="COM_YANDEXMARKET_OFFERS_GROUP_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <!-- Статус товара-->
+            <field
+                    name="available"
+                    type="radio"
+                    required="true"
+                    label="COM_YANDEXMARKET_OFFERS_AVAILABLE"
+                    description="COM_YANDEXMARKET_OFFERS_AVAILABLE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1">
+                <option value="1">COM_YANDEXMARKET_OFFERS_AVAILABLE_OPT_READY</option>
+                <option value="0">COM_YANDEXMARKET_OFFERS_AVAILABLE_OPT_TO_ORDER</option>
+            </field>
+
+            <!--Cтавка для карточки модели-->
+            <field
+                    name="cbid"
+                    type="text"
+                    pattern="^[0-9]+$"
+                    default="0"
+                    required="true"
+                    label="COM_YANDEXMARKET_OFFERS_CBID"
+                    description="COM_YANDEXMARKET_OFFERS_CBID_DESC">
+            </field>
+
+            <!--Основная ставка-->
+            <field
+                    name="bid"
+                    type="text"
+                    pattern="^[0-9]+$"
+                    default="0"
+                    required="true"
+                    label="COM_YANDEXMARKET_OFFERS_BID"
+                    description="COM_YANDEXMARKET_OFFERS_BID_DESC">
+            </field>
+
+            <!--Комиссия «Заказ на Маркете»-->
+            <field
+                    name="fee"
+                    type="text"
+                    pattern="^[0-9]+$"
+                    default="0"
+                    required="true"
+                    label="COM_YANDEXMARKET_OFFERS_FEE"
+                    description="COM_YANDEXMARKET_OFFERS_FEE_DESC">
+            </field>
+
+            <!--Можно купить в магазине-->
+            <field
+                    name="store"
+                    type="radio"
+                    required="true"
+                    label="COM_YANDEXMARKET_OFFERS_STORE"
+                    description="COM_YANDEXMARKET_OFFERS_STORE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <!--Возможен самовывоз товара-->
+            <field
+                    name="pickup"
+                    type="radio"
+                    required="true"
+                    label="COM_YANDEXMARKET_OFFERS_PICKUP"
+                    description="COM_YANDEXMARKET_OFFERS_PICKUP_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <!-- Возможна доставка-->
+            <field
+                    name="delivery"
+                    type="radio"
+                    required="true"
+                    label="COM_YANDEXMARKET_OFFERS_DELIVERY"
+                    description="COM_YANDEXMARKET_OFFERS_DELIVERY_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <!--Индивидуальные условия доставки-->
+            <field
+                    name="offers-deliveries"
+                    type="offersdeliveries"
+                    required="false"
+                    label="COM_YANDEXMARKET_OFFERS_DELIVERIES"
+                    description="COM_YANDEXMARKET_OFFERS_DELIVERIES_DESC">
+            </field>
+            <!--Доставка: 1-->
+            <field
+                    name="offers-delivery-cost-1"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="offers-delivery-days-from-1"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="offers-delivery-days-to-1"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="offers-delivery-order-before-1"
+                    required="false"
+                    type="hidden">
+            </field>
+            <!--Доставка: 2-->
+            <field
+                    name="offers-delivery-cost-2"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="offers-delivery-days-from-2"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="offers-delivery-days-to-2"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="offers-delivery-order-before-2"
+                    required="false"
+                    type="hidden">
+            </field>
+            <!--Доставка: 3-->
+            <field
+                    name="offers-delivery-cost-3"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="offers-delivery-days-from-3"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="offers-delivery-days-to-3"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="offers-delivery-order-before-3"
+                    required="false"
+                    type="hidden">
+            </field>
+            <!--Доставка: 4-->
+            <field
+                    name="offers-delivery-cost-4"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="offers-delivery-days-from-4"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="offers-delivery-days-to-4"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="offers-delivery-order-before-4"
+                    required="false"
+                    type="hidden">
+            </field>
+            <!--Доставка: 5-->
+            <field
+                    name="offers-delivery-cost-5"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="offers-delivery-days-from-5"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="offers-delivery-days-to-5"
+                    required="false"
+                    type="hidden">
+            </field>
+            <field
+                    name="offers-delivery-order-before-5"
+                    required="false"
+                    type="hidden">
+            </field>
+
+            <!--Примечание к заказу-->
+            <field
+                    name="sales_notes"
+                    type="text"
+                    required="false"
+                    label="COM_YANDEXMARKET_OFFERS_SALES_NOTES"
+                    description="COM_YANDEXMARKET_OFFERS_SALES_NOTES_DESC">
+            </field>
+
+            <!--Минимальное количество-->
+            <!--<field-->
+                    <!--name="min-quantity"-->
+                    <!--type="number"-->
+                    <!--step="1"-->
+                    <!--default="1"-->
+                    <!--required="true"-->
+                    <!--aria-required="true"-->
+                    <!--label="COM_YANDEXMARKET_OFFERS_MIN_QUANTITY"-->
+                    <!--description="COM_YANDEXMARKET_OFFERS_MIN_QUANTITY_DESC">-->
+            <!--</field>-->
+
+            <!--Добавочное количество-->
+            <!--<field-->
+                    <!--name="step-quantity"-->
+                    <!--type="number"-->
+                    <!--step="1"-->
+                    <!--default="1"-->
+                    <!--required="true"-->
+                    <!--aria-required="true"-->
+                    <!--label="COM_YANDEXMARKET_OFFERS_STEP_QUANTITY"-->
+                    <!--description="COM_YANDEXMARKET_OFFERS_STEP_QUANTITY_DESC">-->
+            <!--</field>-->
+
+            <!--Гарантия производителя-->
+            <field
+                    name="manufacturer_warranty"
+                    type="radio"
+                    required="true"
+                    label="COM_YANDEXMARKET_OFFERS_WARRANTY"
+                    description="COM_YANDEXMARKET_OFFERS_WARRANTY_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <!--Страна производства-->
+            <field
+                    name="country_of_origin"
+                    type="text"
+                    required="false"
+                    label="COM_YANDEXMARKET_OFFERS_COUNTRY"
+                    description="COM_YANDEXMARKET_OFFERS_COUNTRY_DESC">
+            </field>
+
+            <!--Сексуальные товары-->
+            <field
+                    name="adult"
+                    type="radio"
+                    required="true"
+                    label="COM_YANDEXMARKET_OFFERS_ADULT"
+                    description="COM_YANDEXMARKET_OFFERS_ADULT_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="0">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <!-- Возрастная категория-->
+            <field
+                    name="age"
+                    type="list"
+                    default="0"
+                    required="true"
+                    label="COM_YANDEXMARKET_OFFERS_AGE"
+                    description="COM_YANDEXMARKET_OFFERS_AGE_DESC">
+                <option value="0">0</option>
+                <option value="6">6</option>
+                <option value="12">12</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+            </field>
+
+        </fieldset>
+    </fields>
+</form>
