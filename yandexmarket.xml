@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2.0" method="upgrade"><name>COM_YANDEXMARKET</name><creationDate>28 Jul 2018</creationDate><version>1.2.2</version><author>Igor Inkovskiy</author><authorEmail>igor-i-shop@ya.ru</authorEmail><authorUrl>https://shop.igor-i.ru</authorUrl><copyright>(C) 2018-2020 Igor Inkovskiy. All rights reserved.</copyright><license>Beerware</license><description>COM_YANDEXMARKET_DESCRIPTION</description><updateservers><server type="extension" priority="1" name="COM_YANDEXMARKET Updates">https://shop.igor-i.ru/update/yandexmarket.xml</server></updateservers>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>yandexmarket.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>files</folder>
+	</files>
+	<media destination="com_yandexmarket" folder="media">
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>images</folder>
+	</media>
+	<administration>
+		<menu link="index.php?option=com_yandexmarket" img="../media/com_yandexmarket/images/yandexmarket-16x16.png">
+			COM_YANDEXMARKET_MENU
+		</menu>
+		<submenu>
+			<menu link="option=com_yandexmarket&amp;view=ymls" view="ymls" img="../media/com_yandexmarket/images/yandexmarket-16x16.png" alt="Yandex.Market/YMLs">
+				COM_YANDEXMARKET_SUBMENU_YMLS
+			</menu>
+			<menu link="option=com_yandexmarket&amp;view=categories" view="categories" img="../media/com_yandexmarket/images/yandexmarket-16x16.png" alt="Yandex.Market/Categories">
+				COM_YANDEXMARKET_SUBMENU_CATEGORIES
+			</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>yandexmarket.php</filename>
+			<folder>connectors</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>libraries</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin/language">
+			<language tag="ru-RU">ru-RU/ru-RU.com_yandexmarket.sys.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_yandexmarket.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_yandexmarket.sys.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_yandexmarket.ini</language>
+		</languages>
+	</administration>
+</extension>
